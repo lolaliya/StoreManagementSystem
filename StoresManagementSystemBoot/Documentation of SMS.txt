@@ -1,0 +1,137 @@
+STORE MANAGEMENT SYSTEM
+	URL: http://localhost:8080/StoreManagementSystem
+
+DEALER
+1. Add Dealer
+	end point: /savedealer  
+	Method: POST
+	input data: {
+	"dealerId":1,
+	"dealerContactNo":"9738419790",
+	"dealerLocation":"kengeri",
+	"dealerName":"chaya",
+	"dealerPassword":"root"
+}
+
+2. Fetch Dealer data
+	end point: /get/dealer/{id}  
+	Method: GET
+	input data: Existing dealerId in integer format as path variable
+
+3. Dealer Login
+	end point: /get/dealerlogin/{id}/{password}  
+	Method: GET
+	input data: Existing dealerId in integer format and respective password as path variable
+
+4. Fetching all the dealers
+	end point: /getAllDealers 
+	Method: GET
+	
+5. Delete Dealer
+	end point: /deletedealer/{id}
+	Method: DELETE
+	input data:  Existing dealerId in integer format as path variable
+
+6. Update dealer
+	end point: /getdealer/update
+	Method: PUT
+	input data:{
+    "dealerId": 1,
+    "dealerContactNo": 8861136481,
+    "dealerLocation": "kengeri",
+    "dealerName": "chayakiran",
+    "dealerPassword": "root"
+}
+
+
+MANUFACTURER
+1. Add Manufacturer
+	end point: /savemanufacturer  
+	Method: POST
+	input data
+	{
+	"manufacturerId":1,
+	"manufacturerName":"kavya",
+	"manufacturerLocation":"kengeri",
+	"manufacturerContact":"1234567890",
+	"manufacturerPassword":"root"
+}
+
+
+2. Fetch Manufacturer data
+	end point: /get/manufacturer/{id}  
+	Method: GET
+	input data: Existing ManufacturerId in integer format as path variable
+
+3. Manufacturer Login
+	end point: /loginmanufacturer/{id}/{password}  
+	Method: GET
+	input data: Existing ManufacturerId in integer format and respective password as path variable
+
+4. Fetching all the Manufacturers
+	end point: /getAllManufacturers 
+	Method: GET
+	
+5. Delete Manufacturer
+	end point: /deletemanufacturer/{id} 
+	Method: DELETE
+	input data:  Existing ManufacturerId in integer format as path variable
+
+6. Update Manufacturer
+	end point: /getmanufacturer/update  
+	Method: PUT
+	input data:
+	{
+	"manufacturerId":2,
+	"manufacturerName":"chayaa",
+	"manufacturerLocation":"blr",
+	"manufacturerContact":"1234567890",
+	"manufacturerPassword":"root"
+}
+
+	
+PRODUCTS
+1. Add products
+	end point: /saveproduct 
+	Method: POST
+	input data: 
+	{
+	"productId":1,
+	"manufacturerId":"1",
+	"productName":"fans",
+	"productPrice":750,
+	"productStock":10
+}
+
+2.Fetch product
+	end point: /get/product/{id} 
+	Method: GET
+	input data: Existing dealerId in integer format as path variable
+
+3. Fetch product price
+	end point: /productprice/{id} 
+	Method: GET
+	input data: Existing dealerId in integer format as path variable
+
+4. Fetch all the products
+	end point: /getAllproducts 
+	Method: GET
+
+
+5.Delete product
+	end point: /deleteproduct/{id} 
+	Method: DELETE
+	input data: Existing dealerId in integer format as path variable
+	
+6. Update product
+	end point: /getProduct/update 
+	Method: PUT
+	input data:
+	{
+	"productId":1,
+	"manufacturerId":"1",
+	"productName":"fans",
+	"productPrice":750,
+	"productStock":10
+}
+
